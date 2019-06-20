@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+body {
+    font-family: Mali, sans-serif;
+    height: 100vh;
+    background: url(images/pattern.png);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 14% auto;
+    grid-template-areas: 
+                        "input input"
+                        "taskList doneList";
+}
+
+
+.inputDiv {
+    grid-area: input;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inputDiv #inputText {
+    width: 50%;
+    height: 30%;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Mali, sans-serif;
+    border: 1px solid #000;
+}
+
+.inputDiv #inputBtn {
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 30%;
+    height: 30px;
+    font-size: 20px;
+    color:#000;
+    background: #29b4ff;
+    text-transform: uppercase;
+    padding: 1px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    cursor: pointer; 
+    font-family: Mali, sans-serif;   
+}
+
+.inputDiv #inputBtn:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+#taskContainer {
+    grid-area: taskList;
+    background: #fff;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#doneContainer {
+    grid-area: doneList;
+    background: #fff;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#taskList {
+    text-align: center;
+    list-style-type: none;
+    word-wrap: break-word;    
+    
+}
+
+#doneList {
+    text-align: center;
+    list-style-type: none;
+    word-wrap: break-word;    
+}
+
+#taskList li, #doneList li {
+    margin: 25px;
+    font-size: 20px;
+}
+
+#doneList li {
+    font-size: 21px;
+}
+
+.doneBtn {
+    margin-left: 10px;   
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+}
+
+.listTitle {
+    text-align: center;
+    text-decoration: underline;
+}
